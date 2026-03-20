@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Chatbot Options</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 6px 8px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    button {
+      margin-top: 16px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    #status {
+      margin-top: 10px;
+      font-size: 13px;
+      color: green;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h2>AI Chatbot Settings</h2>
+  <form id="options-form">
+    <label for="api-key">API Key</label>
+    <input type="password" id="api-key" placeholder="Enter your API key" />
+
+    <label for="provider">Provider</label>
+    <select id="provider">
+      <option value="groq">Groq</option>
+      <option value="huggingface">Hugging Face</option>
+    </select>
+
+    <button type="button" id="save-btn">Save</button>
+    <div id="status"></div>
+  </form>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
