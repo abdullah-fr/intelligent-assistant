@@ -4,7 +4,7 @@
  */
 
 // ── Browser shim ──────────────────────────────────────────────────────────────
-const browserAPI = typeof browser !== "undefined" ? browser : chrome;
+const browserAPI = typeof browser !== "undefined" ? browser : (typeof chrome !== "undefined" ? chrome : {});
 
 // ── ContextExtractor ──────────────────────────────────────────────────────────
 const ECOMMERCE_HOSTNAMES = [
